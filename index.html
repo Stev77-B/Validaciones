@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Banco Futuro</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- FORMULARIO -->
+    <div class="card">
+        <h1>🏦 Banco Futuro</h1>
+        <p class="sub">Simulador de Crédito</p>
+
+        <div class="grupo">
+            <input id="txtIngresos" type="number" placeholder="Ingresos mensuales">
+            <span id="errIngresos" class="error"></span>
+        </div>
+
+        <div class="grupo">
+            <input id="txtEgresos" type="number" placeholder="Egresos mensuales">
+            <span id="errEgresos" class="error"></span>
+        </div>
+
+        <div class="grupo">
+            <input id="txtMonto" type="number" placeholder="Monto solicitado">
+            <span id="errMonto" class="error"></span>
+        </div>
+
+        <div class="grupo">
+            <input id="txtPlazo" type="number" placeholder="Plazo (años)">
+            <span id="errPlazo" class="error"></span>
+        </div>
+
+        <div class="grupo">
+            <input id="txtTasa" type="number" placeholder="Tasa % anual">
+            <span id="errTasa" class="error"></span>
+        </div>
+
+        <button onclick="calcular()">Calcular Crédito</button>
+    </div>
+
+    <!-- RESULTADOS -->
+    <div class="card resultados">
+        <h2>📊 Resultados</h2>
+
+        <div class="fila">
+            <span>Disponible:</span>
+            <b id="lblDisponibleValor">$ 0.00</b>
+        </div>
+
+        <div class="fila">
+            <span>Capacidad:</span>
+            <b id="lblCapacidadValor">$ 0.00</b>
+        </div>
+
+        <div class="fila">
+            <span>Interés:</span>
+            <b id="lblInteresValor">$ 0.00</b>
+        </div>
+
+        <div class="fila">
+            <span>Total:</span>
+            <b id="lblTotalValor">$ 0.00</b>
+        </div>
+
+        <div class="fila">
+            <span>Cuota mensual:</span>
+            <b id="lblCuotaValor">$ 0.00</b>
+        </div>
+
+        <div id="lblResultado" class="resultadoFinal"></div>
+    </div>
+
+</div>
+
+<script src="funciones.js"></script>
+<script src="simulador.js"></script>
+
+</body>
+</html>
